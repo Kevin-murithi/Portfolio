@@ -2,7 +2,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Technologies from './components/Technologies';
-import Contact from './components/Contact';
 import Services from './components/Services';
 
 const App = () => {
@@ -20,7 +19,7 @@ const App = () => {
      <About />
      <Technologies />
      <Services />
-     <Contact />
+
      </div>
     </div>
   )
