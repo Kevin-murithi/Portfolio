@@ -4,7 +4,7 @@ import About from './components/About';
 import Technologies from './components/Technologies';
 import Contact from './components/Contact';
 import Services from './components/Services';
-
+import Demonav from './components/demonav';
 const App = () => {
 
   return (

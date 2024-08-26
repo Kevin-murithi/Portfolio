@@ -74,3 +74,36 @@ export const CONTACT = {
   phoneNo: "+12 4555 666 00 ",
   email: "me@example.com",
 };
+
+export const MyServices = [
+  {
+      id:1,
+      title: "Frontend Development",
+      description: "Building responsive and interactive user interfaces",
+  },
+  {
+      id:2,
+      title: "Backend Development",
+      description: "Developing robust server-side logiic",
+  },
+  {
+      id:3,
+      title: "Fullstack Development",
+      description: "Combining both frontend and backend and development skills",
+  },
+  {
+      id:4,
+      title: "Database Management",
+      description: "Designing and managing databases for optimized performance and data integrity.",
+  },
+  {
+      id:5,
+      title: "Code Review and Debugging",
+      description: "Analyzing and debugging code to improve performance, security, and maintainability.",
+  },
+  {
+      id:6,
+      title: "Cybersecurity",
+      description: "system analyzing for weakpoints vulnerable to attacks",
+  },
+]

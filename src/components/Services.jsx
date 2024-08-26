@@ -1,23 +1,28 @@
+import { MyServices } from "../constants"
+
 const Services = () => {
   return (
-    <div className="border-b border-neutral-800 pb-24">
-        <h2 className="my-20 text-center text-4xl">My <span className="text-neutral-500">Services</span></h2>
-        <p className="my-2 py-6 text-center">Excited to work with you</p>
-    <div className="flex flex-wrap justify-evenly items-stretch">
-        <div className="w-full sm:w-1/3 lg:w-1/4 rounded-2xl border-4 border-neutral-800 m-4 p-6 transition-transform duration-300 hover:scale-105 hover:shadow-lg flex flex-col">
-            <h3 className="text-xl font-semibold text-center lg:text-left">Frontend Optimization</h3>
-            <p className="w-full lg:w-3/4 mt-4 mb-8 text-center lg:text-left flex-grow">Enhancing website speed, SEO, and user experience with modern frontend techniques.</p>
-        </div>
-        <div className="w-full sm:w-1/3 lg:w-1/4 rounded-2xl border-4 border-neutral-800 m-4 p-6 transition-transform duration-300 hover:scale-105 hover:shadow-lg flex flex-col">
-            <h3 className="text-xl font-semibold text-center lg:text-left">Database Management</h3>
-            <p className="w-full lg:w-3/4 mt-4 mb-8 text-center lg:text-left flex-grow">Designing and managing databases for optimized performance and data integrity.</p>
-        </div>
-        <div className="w-full sm:w-1/3 lg:w-1/4 rounded-2xl border-4 border-neutral-800 m-4 p-6 transition-transform duration-300 hover:scale-105 hover:shadow-lg flex flex-col">
-            <h3 className="text-xl font-semibold text-center lg:text-left">Code Review and Debugging</h3>
-            <p className="w-full lg:w-3/4 mt-4 mb-8 text-center lg:text-left flex-grow">Analyzing and debugging code to improve performance, security, and maintainability.</p>
+    <div className="mb-20 flex justify-center flex-col items-center border-b border-neutral-900 pb-24" id="Services">
+        <h2 className="my-20 text-center text-4xl">My Services</h2>
+        <div className="w-3/4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >
+                {MyServices.map(service =>(
+                    <div key={service.id} className="bg-gray-900 px-4 pb-6 rounded-lg hover:shadow-lg transform transition-transfrom duration-300 hover:scale-105">
+                        <div className="text-right text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700  to-purple-900">
+                            {service.id}
+                        </div>
+                        <h3 className="mt-2 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700  to-purple-900">
+                            {service.title}
+                        </h3>
+                        <p className="mt-2 text-gray-300">
+                            {service.description}
+                        </p>
+                        <a href="#" className="">Read More</a>
+                    </div>
+                ))}
+            </div>
         </div>
     </div>
-</div>
 
 
 
