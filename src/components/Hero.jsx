@@ -8,9 +8,9 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35" id="Home">
+    <div className="border-b border-neutral-900  mt-36 pb-20 lg:mb-35" id="Home">
         <div className="flex flex-wrap">
-             <div className="w-full lg:w-1/2 lg:p-8">
+             <div className="w-full lg:w-1/2 lg:p-2">
                 <div className="flex justify-center items-center mt-14">
                     <motion.img 
                         initial={{x: 100, opacity:0}}
@@ -38,7 +38,12 @@ const Hero = () => {
                         variants={container(2)}
                         initial="hidden" 
                         animate="visible"
-                        className="my-2 max-w-xl py-6 font-light tracking-tighter">I am an enthusiastic full stack developer with a talent for building strong and scalable web applications. With years of practical experience, I have sharpened my skills in front-end technologies such as React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My objective is to utilize my expertise to develop innovative solutions that enhance business growth and provide outstanding user experiences.
+                        className="my-2 max-w-xl py-6 font-light tracking-tighter">
+                        
+                        <button className="hidden md:inline bg-gradient-to-r from-blue-700 to-purple-900 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-105">
+                            Connect Me
+                        </button>
+
                     </motion.p>
                 </div>
             </div>
