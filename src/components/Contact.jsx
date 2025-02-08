@@ -38,7 +38,7 @@ const Contact = () => {
           </div>
         </div>
         {/* Contact Form */}
-        <div className="w-full md:w-auto">
+        <div className="w-full md:w-auto mt-10">
           <form action="https://formsubmit.co/murithikevin54@gmail.com" method="POST" className="flex flex-col space-y-4">
             <input 
               type="text" 
