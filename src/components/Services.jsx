@@ -17,7 +17,7 @@ const Services = () => {
                         <p className="mt-2 text-gray-300">
                             {service.description}
                         </p>
-                        <a href="#" className="">Read More</a>
+                        <p className="mt-4 underline p-2"><a href="" className="">Read More</a></p>
                     </div>
                 ))}
             </div>

@@ -5,7 +5,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="fixed top-0 left-0 w-full z-50 bg-black text-white px-8 md:px-16 lg:px-24 shadow-lg">
+        <div className="fixed top-0 left-0 w-full z-50 bg-black text-white px-8 md:px-12 lg:px-24 shadow-lg">
             <div className="container py-3 flex justify-between items-center">
                 {/* Logo */}
                 <div className="text-2xl font-bold">Kevin</div>
@@ -14,6 +14,7 @@ export default function Navbar() {
                 <div className="hidden md:flex space-x-6">
                     <a href="#Home" className="hover:text-gray-400">Home</a>
                     <a href="#About" className="hover:text-gray-400">About Me</a>
+                    <a href="#Skills" className="hover:text-gray-400">Skills</a>
                     <a href="#Services" className="hover:text-gray-400">Services</a>
                     <a href="#Projects" className="hover:text-gray-400">Projects</a>
                     <a href="#Contact" className="hover:text-gray-400">Contact</a>

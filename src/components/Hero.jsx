@@ -8,9 +8,9 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="border-b border-neutral-900  mt-36 pb-20 lg:mb-35" id="Home">
-        <div className="flex flex-wrap">
-             <div className="w-full lg:w-1/2 lg:p-2">
+    <div className="border-b border-neutral-900 mb-20 mt-36 pb-20 pt-12 lg:mb-35" id="Home">
+        <div className="flex flex-col md:flex-row">
+            <div className="w-full lg:w-1/2 lg:p-2">
                 <div className="flex justify-center items-center mt-14">
                     <motion.img 
                         initial={{x: 100, opacity:0}}
@@ -19,13 +19,13 @@ const Hero = () => {
                         className = ""src={profilePic} width={300} height= {300} alt="profile pic" />
                 </div>
             </div>
-            <div className="w-full lg:w-2/5 mr-10">
-                <div className="flex flex-col items-center lg:items-start">
+            <div className="w-full lg:w-2/5 mr-0 mt-10">
+                <div className="flex flex-col items-center justify-center lg:items-start">
                     <motion.h1 
                         variants={container(1)}
                         initial="hidden" 
                         animate="visible"
-                        className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
+                        className="pb-16 text-5xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
                         Kevin Murithi
                     </motion.h1>
                     <motion.span 
@@ -38,9 +38,9 @@ const Hero = () => {
                         variants={container(2)}
                         initial="hidden" 
                         animate="visible"
-                        className="my-2 max-w-xl py-6 font-light tracking-tighter">
+                        className="my-2 py-6 font-light tracking-tighter">
                         
-                        <button className="hidden md:inline bg-gradient-to-r from-blue-700 to-purple-900 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-105">
+                        <button className="bg-gradient-to-r from-blue-700 to-purple-900 text-white px-4 py-2 rounded-full transition-transform duration-300 hover:scale-105">
                             Connect Me
                         </button>
 

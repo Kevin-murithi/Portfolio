@@ -4,7 +4,6 @@ import About from './components/About';
 import Technologies from './components/Technologies';
 import Contact from './components/Contact';
 import Services from './components/Services';
-import Demonav from './components/demonav';
 const App = () => {
 
   return (
@@ -14,7 +13,7 @@ const App = () => {
         </div>
       
      
-     <div className='container mx-auto px-8'>
+     <div className='mx-1 px-0 w-full'>
      <Navbar />
      <Hero />
      <About />

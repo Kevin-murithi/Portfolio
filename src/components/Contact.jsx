@@ -2,7 +2,7 @@ import { FaInstagram, FaLinkedin, FaGithub, FaXTwitter, FaEnvelope } from "react
 
 const Contact = () => {
   return (
-    <div className="border-b border-neutral-900 pb-20 h-full" id="Contact">
+    <div className="border-b border-neutral-900 pb-20 h-full w-full mx-2" id="Contact">
       <h2 className="my-10 text-center text-4xl font-semibold">Get in Touch</h2>
 
       <div className="flex flex-col md:flex-row w-full px-10 h-full justify-evenly items-center">
@@ -24,13 +24,13 @@ const Contact = () => {
               <FaInstagram size={28} className="text-pink-600 hover:text-pink-700" />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:scale-110 transition-transform shadow-lg">
-            <FaXTwitter size={28} className="text-black hover:text-gray-800" />
+            <FaXTwitter size={28} className="text-black hover:text-gray-500" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:scale-110 transition-transform shadow-lg">
             <FaLinkedin size={28} className="text-blue-700 hover:text-blue-800" />
             </a>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-black rounded-full hover:scale-110 transition-transform shadow-lg">
-            <FaGithub size={28} className="text-white hover:text-gray-900" />
+            <FaGithub size={28} className="text-white hover:text-gray-500" />
             </a>
             <a href="mailto:murithikevin54@gmail.com" className="p-2 hover:scale-110 transition-transform">
               <FaEnvelope size={28} className="text-red-600 hover:text-red-700" />
@@ -38,7 +38,7 @@ const Contact = () => {
           </div>
         </div>
         {/* Contact Form */}
-        <div className="w-full md:w-auto mt-10">
+        <div className="w-full md:w-auto mt-10 mr-6">
           <form action="https://formsubmit.co/murithikevin54@gmail.com" method="POST" className="flex flex-col space-y-4">
             <input 
               type="text" 
