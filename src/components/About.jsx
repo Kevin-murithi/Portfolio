@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="border-b border-neutral-900 pb-20 mb-20 w-3/4" id="About" >
+    <div className="border-b border-neutral-900 pb-20 mb-20 w-5/6" id="About" >
       {/* Heading */}
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
@@ -14,7 +14,7 @@ const About = () => {
         About Me
       </motion.h2>
 
-      <div className="md:ml-64 flex flex-col md:flex-row lg:flex-row items-center justify-center gap-12 px-0 md:px-16">
+      <div className="md:ml-52 flex flex-col md:flex-row lg:flex-row items-center justify-center gap-12 px-0 md:px-16">
         {/* Image Section */}
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
