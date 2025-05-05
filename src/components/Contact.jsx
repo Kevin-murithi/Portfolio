@@ -20,16 +20,16 @@ const Contact = () => {
 
           {/* Social Icons */}
           <div className="flex space-x-4 justify-center md:justify-start mt-6">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:scale-110 transition-transform shadow-lg">
+            <a href="https://www.instagram.com/ps.kevin_/?__pwa=1" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:scale-110 transition-transform shadow-lg">
               <FaInstagram size={28} className="text-pink-600 hover:text-pink-700" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:scale-110 transition-transform shadow-lg">
+            <a href="https://x.com/murithikevin54" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:scale-110 transition-transform shadow-lg">
             <FaXTwitter size={28} className="text-black hover:text-gray-500" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:scale-110 transition-transform shadow-lg">
+            <a href="https://www.linkedin.com/in/kevin-murithi54/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:scale-110 transition-transform shadow-lg">
             <FaLinkedin size={28} className="text-blue-700 hover:text-blue-800" />
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-black rounded-full hover:scale-110 transition-transform shadow-lg">
+            <a href="https://github.com/Kevin-murithi" target="_blank" rel="noopener noreferrer" className="p-2 bg-black rounded-full hover:scale-110 transition-transform shadow-lg">
             <FaGithub size={28} className="text-white hover:text-gray-500" />
             </a>
             <a href="mailto:murithikevin54@gmail.com" className="p-2 hover:scale-110 transition-transform">

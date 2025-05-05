@@ -3,18 +3,18 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="border-b border-neutral-900 pb-20 mb-20" id="About" >
+    <div className="border-b border-neutral-900 pb-20 mb-20 w-3/4" id="About" >
       {/* Heading */}
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 1.5 }}
-        className="my-16 text-center text-2xl md:text-4xl font-bold"
+        className="my-16 md:ml-52 text-center text-4xl md:text-4xl"
       >
-        About <span className="text-blue-500">Me</span>
+        About Me
       </motion.h2>
 
-      <div className="flex flex-col md:flex-row lg:flex-row items-center justify-center gap-12 px-0 md:px-16">
+      <div className="md:ml-64 flex flex-col md:flex-row lg:flex-row items-center justify-center gap-12 px-0 md:px-16">
         {/* Image Section */}
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
