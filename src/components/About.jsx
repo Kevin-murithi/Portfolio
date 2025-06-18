@@ -123,7 +123,7 @@ const About = () => {
               className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             />
             <motion.div
-              className="relative w-72 h-72 md:w-80 md:h-80 rounded-2xl p-3 shadow-lg shadow-blue-500/50 bg-gradient-to-br from-neutral-800 to-neutral-900"
+              className="relative w-72 h-72 md:w-80 md:h-80 rounded-2xl p-1 shadow-lg shadow-blue-500/50 bg-gradient-to-br from-blue-500 to-purple-500"
               whileHover={{
                 scale: 1.02,
                 rotate: 1,

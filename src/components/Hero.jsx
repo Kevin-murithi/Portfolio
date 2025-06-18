@@ -89,7 +89,7 @@ const Hero = () => {
     }, [controls]);
 
     return (
-        <div className="border-b border-neutral-900 mb-20 mt-36 pb-20 pt-12 lg:mb-35 relative overflow-hidden" id="Home">
+        <div className="border-b border-neutral-900 mb-20 pt-24 pb-20 lg:mb-35 relative overflow-hidden" id="Home">
             {/* Floating Background Elements */}
             <motion.div
                 className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-xl"
@@ -121,7 +121,7 @@ const Hero = () => {
                                 width={300}
                                 height={300}
                                 alt="profile pic"
-                                className="relative z-10 rounded-full border-2 border-transparent bg-gradient-to-r from-blue-500 to-purple-500 p-1"
+                                className="relative z-10 rounded-full border border-transparent bg-gradient-to-r from-blue-500 to-purple-500 p-0.5"
                             />
                         </motion.div>
                     </div>
