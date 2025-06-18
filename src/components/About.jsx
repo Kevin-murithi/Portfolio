@@ -1,4 +1,4 @@
-import aboutImg from "../assets/profilePic6.jpg";
+import profilePic from "../assets/profilePic.jpg";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -131,8 +131,8 @@ const About = () => {
               }}
             >
               <motion.img
-                src={aboutImg}
-                alt="Profile"
+                src={profilePic}
+                alt="Kevin Murithi - Full Stack Developer"
                 className="w-full h-full object-cover rounded-xl"
                 whileHover={{
                   scale: 1.05,

@@ -1,6 +1,7 @@
-import profilePic from "../assets/profilePic.jpg"
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import CodeEditor from "./CodeEditor";
+import SkillBadges from "./SkillBadges";
 
 const container = (delay) => ({
     hidden: { x: -100, opacity: 0 },
@@ -24,14 +25,7 @@ const floatingAnimation = {
     }
 };
 
-const imageHoverAnimation = {
-    scale: 1.05,
-    rotate: 2,
-    transition: {
-        duration: 0.3,
-        ease: "easeInOut"
-    }
-};
+
 
 const buttonVariants = {
     idle: {
@@ -89,7 +83,7 @@ const Hero = () => {
     }, [controls]);
 
     return (
-        <div className="border-b border-neutral-900 mb-20 pt-24 pb-20 lg:mb-35 relative overflow-hidden" id="Home">
+        <div className="border-b border-neutral-900 mb-20 pt-24 pb-20 lg:mb-35 relative overflow-hidden min-h-screen flex items-center" id="Home">
             {/* Floating Background Elements */}
             <motion.div
                 className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-xl"
@@ -103,40 +97,19 @@ const Hero = () => {
                 }}
             />
 
-            <div className="flex flex-col md:flex-row relative z-10">
-                <div className="w-full lg:w-1/2 lg:p-2">
-                    <div className="flex justify-center items-center mt-14">
+            <div className="container mx-auto px-6 lg:px-16 xl:px-24 2xl:px-32">
+                <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                    {/* Left Content */}
+                    <div className="space-y-8">
                         <motion.div
-                            initial={{ x: 100, opacity: 0, scale: 0.8 }}
-                            animate={{ x: 0, opacity: 1, scale: 1 }}
-                            transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
-                            whileHover={imageHoverAnimation}
-                            className="relative group"
-                        >
-                            <motion.div
-                                className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                            />
-                            <img
-                                src={profilePic}
-                                width={300}
-                                height={300}
-                                alt="profile pic"
-                                className="relative z-10 rounded-full border border-transparent bg-gradient-to-r from-blue-500 to-purple-500 p-0.5"
-                            />
-                        </motion.div>
-                    </div>
-                </div>
-
-                <div className="w-full lg:w-2/5 mr-0 mt-10">
-                    <div className="flex flex-col items-center justify-center lg:items-start">
-                        <motion.h1
-                            variants={container(1)}
+                            variants={container(0.5)}
                             initial="hidden"
                             animate="visible"
-                            className="pb-16 text-5xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
                         >
-                            <TypewriterText text="Kevin Murithi" delay={1000} />
-                        </motion.h1>
+                            <h1 className="pb-16 text-5xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
+                                <TypewriterText text="Kevin Murithi" delay={500} />
+                            </h1>
+                        </motion.div>
 
                         <motion.div
                             variants={container(1.5)}
@@ -165,6 +138,19 @@ const Hero = () => {
                             animate="visible"
                             className="my-2 py-6 font-light tracking-tighter"
                         >
+                            <p className="text-gray-400 text-lg leading-relaxed max-w-lg">
+                                A passionate Web Developer focused on creating intuitive,
+                                responsive, and high-performance web applications that
+                                deliver outstanding user experiences.
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            variants={container(2.5)}
+                            initial="hidden"
+                            animate="visible"
+                            className="my-2 py-6 font-light tracking-tighter"
+                        >
                             <motion.button
                                 variants={buttonVariants}
                                 initial="idle"
@@ -187,7 +173,47 @@ const Hero = () => {
                             </motion.button>
                         </motion.div>
                     </div>
+
+                    {/* Right Interactive Elements */}
+                    <div className="relative flex flex-col items-center space-y-8">
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1, delay: 0.8 }}
+                        >
+                            <CodeEditor />
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 1, delay: 1.2 }}
+                        >
+                            <SkillBadges />
+                        </motion.div>
+                    </div>
                 </div>
+
+                {/* Scroll Indicator */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2, duration: 1 }}
+                    className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2"
+                >
+                    <span className="text-gray-400 text-sm">Scroll Down</span>
+                    <motion.div
+                        animate={{ y: [0, 10, 0] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="w-6 h-10 border-2 border-cyan-500 rounded-full flex justify-center"
+                    >
+                        <motion.div
+                            animate={{ y: [0, 12, 0] }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                            className="w-1 h-3 bg-cyan-500 rounded-full mt-2"
+                        />
+                    </motion.div>
+                </motion.div>
             </div>
         </div>
     )
