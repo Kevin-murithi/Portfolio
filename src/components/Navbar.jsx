@@ -14,9 +14,8 @@ export default function Navbar() {
                 <div className="hidden md:flex space-x-6">
                     <a href="#Home" className="hover:text-gray-400">Home</a>
                     <a href="#About" className="hover:text-gray-400">About Me</a>
+                    <a href="#Services" className="hover:text-gray-400">Services</a>
                     <a href="#Skills" className="hover:text-gray-400">Skills</a>
-                    {/* <a href="#Services" className="hover:text-gray-400">Services</a>
-                    <a href="#Projects" className="hover:text-gray-400">Projects</a> */}
                     <a href="#Contact" className="hover:text-gray-400">Contact</a>
                 </div>
 

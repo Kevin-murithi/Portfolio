@@ -75,35 +75,77 @@ export const CONTACT = {
   email: "me@example.com",
 };
 
+export const TECH_CATEGORIES = {
+  frontend: {
+    title: "Frontend",
+    description: "Creating beautiful, responsive user interfaces",
+    technologies: [
+      { name: "React", icon: "RiReactjsLine", color: "text-cyan-400" },
+      { name: "Next.js", icon: "SiNextdotjs", color: "text-white" },
+      { name: "JavaScript", icon: "DiJavascript1", color: "text-yellow-400" },
+      { name: "TypeScript", icon: "SiTypescript", color: "text-blue-400" },
+      { name: "Tailwind CSS", icon: "SiTailwindcss", color: "text-cyan-400" },
+    ]
+  },
+  backend: {
+    title: "Backend",
+    description: "Building robust server-side applications",
+    technologies: [
+      { name: "Node.js", icon: "DiNodejs", color: "text-green-400" },
+      { name: "Python", icon: "DiPython", color: "text-blue-400" },
+      { name: "Express", icon: "SiExpress", color: "text-gray-400" },
+      { name: "Django", icon: "DiDjango", color: "text-green-600" },
+      { name: "REST APIs", icon: "SiPostman", color: "text-orange-400" },
+    ]
+  },
+  infrastructure: {
+    title: "Infrastructure",
+    description: "Deploying and scaling applications",
+    technologies: [
+      { name: "MongoDB", icon: "SiMongodb", color: "text-green-500" },
+      { name: "PostgreSQL", icon: "SiPostgresql", color: "text-blue-400" },
+      { name: "MySQL", icon: "DiMysql", color: "text-blue-500" },
+      { name: "Docker", icon: "SiDocker", color: "text-blue-400" },
+      { name: "AWS", icon: "SiAmazon", color: "text-orange-400" },
+    ]
+  }
+};
+
 export const MyServices = [
   {
-      id:1,
+      id: "01",
       title: "Frontend Development",
-      description: "Building responsive and interactive user interfaces",
+      description: "Creating responsive, interactive user interfaces with React.js, Next.js, and modern CSS frameworks like Tailwind. Expert solutions tailored to your technical challenges.",
+      icon: "💻"
   },
   {
-      id:2,
+      id: "02",
       title: "Backend Development",
-      description: "Developing robust server-side logiic",
+      description: "Building robust server-side applications with Node.js, Express, and Python to power your digital products. Scalable architecture design and implementation.",
+      icon: "⚙️"
   },
   {
-      id:3,
-      title: "Fullstack Development",
-      description: "Combining both frontend and backend and development skills",
+      id: "03",
+      title: "API Development",
+      description: "Design and implementation of RESTful and GraphQL APIs that enable seamless communication between systems. Comprehensive API documentation included.",
+      icon: "🔗"
   },
   {
-      id:4,
-      title: "Database Management",
-      description: "Designing and managing databases for optimized performance and data integrity.",
+      id: "04",
+      title: "Database Architecture",
+      description: "Expert database design, optimization, and migration services for PostgreSQL, MongoDB, and other systems. Performance tuning and data integrity assured.",
+      icon: "🗄️"
   },
   {
-      id:5,
-      title: "Code Review and Debugging",
-      description: "Analyzing and debugging code to improve performance, security, and maintainability.",
+      id: "05",
+      title: "Full-Stack Web Apps",
+      description: "End-to-end development of web applications that deliver exceptional user experiences with solid architecture. Complete project lifecycle management.",
+      icon: "🌐"
   },
   {
-      id:6,
-      title: "Cybersecurity",
-      description: "system analyzing for weakpoints vulnerable to attacks",
+      id: "06",
+      title: "Security Implementation",
+      description: "Implementing robust authentication, authorization, and data protection measures for your applications. Comprehensive security audits and vulnerability assessments.",
+      icon: "🔒"
   },
 ]
