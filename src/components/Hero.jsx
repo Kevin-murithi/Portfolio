@@ -97,16 +97,16 @@ const Hero = () => {
                 }}
             />
 
-            <div className="container mx-auto px-6 lg:px-16 xl:px-24 2xl:px-32">
-                <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32">
+                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center relative z-10">
                     {/* Left Content */}
-                    <div className="space-y-8">
+                    <div className="space-y-4 sm:space-y-6 md:space-y-8">
                         <motion.div
                             variants={container(0.5)}
                             initial="hidden"
                             animate="visible"
                         >
-                            <h1 className="pb-16 text-5xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
+                            <h1 className="pb-16 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-thin tracking-tight lg:mt-16">
                                 <TypewriterText text="Kevin Murithi" delay={500} />
                             </h1>
                         </motion.div>
@@ -118,7 +118,7 @@ const Hero = () => {
                             className="relative"
                         >
                             <motion.span
-                                className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent"
+                                className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-tight text-transparent"
                                 animate={{
                                     backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
                                 }}
@@ -138,7 +138,7 @@ const Hero = () => {
                             animate="visible"
                             className="my-2 py-6 font-light tracking-tighter"
                         >
-                            <p className="text-gray-400 text-lg leading-relaxed max-w-lg">
+                            <p className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
                                 A passionate Web Developer focused on creating intuitive,
                                 responsive, and high-performance web applications that
                                 deliver outstanding user experiences.
@@ -156,7 +156,7 @@ const Hero = () => {
                                 initial="idle"
                                 whileHover="hover"
                                 whileTap="tap"
-                                className="bg-gradient-to-r from-blue-700 to-purple-900 text-white px-8 py-3 rounded-full font-medium relative overflow-hidden group"
+                                className="bg-gradient-to-r from-blue-700 to-purple-900 text-white px-4 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 lg:px-10 lg:py-4 text-sm sm:text-base md:text-lg rounded-full font-medium relative overflow-hidden group"
                             >
                                 <motion.div
                                     className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -175,7 +175,7 @@ const Hero = () => {
                     </div>
 
                     {/* Right Interactive Elements */}
-                    <div className="relative flex flex-col items-center space-y-8">
+                    <div className="relative flex flex-col items-center space-y-4 sm:space-y-6 md:space-y-8">
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
