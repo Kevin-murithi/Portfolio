@@ -98,7 +98,7 @@ export default function Navbar() {
                     </button>
                 </div>
 
-                <nav className="flex flex-col items-center space-y-6 mt-10">
+                <nav className="bg-black flex flex-col items-center space-y-6 mt-10">
                     {navItems.map((item) => (
                         <motion.a
                             key={item.name}
