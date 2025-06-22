@@ -97,16 +97,16 @@ const Hero = () => {
                 }}
             />
 
-            <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32">
-                <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center relative z-10">
+            <div className="container mx-auto px-6 md:px-16 lg:px-24 xl:px-32 2xl:px-40">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center relative z-10">
                     {/* Left Content */}
-                    <div className="space-y-4 sm:space-y-6 md:space-y-8">
+                    <div className="space-y-4 md:space-y-6">
                         <motion.div
                             variants={container(0.5)}
                             initial="hidden"
                             animate="visible"
                         >
-                            <h1 className="pb-16 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-thin tracking-tight lg:mt-16">
+                            <h1 className="pb-8 md:pb-12 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-thin tracking-tight">
                                 <TypewriterText text="Kevin Murithi" delay={500} />
                             </h1>
                         </motion.div>
@@ -136,12 +136,11 @@ const Hero = () => {
                             variants={container(2)}
                             initial="hidden"
                             animate="visible"
-                            className="my-2 py-6 font-light tracking-tighter"
+                            className="my-2 py-4 md:py-6 font-light tracking-tighter"
                         >
-                            <p className="text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
-                                A passionate Web Developer focused on creating intuitive,
-                                responsive, and high-performance web applications that
-                                deliver outstanding user experiences.
+                            <p className="text-gray-400 text-base md:text-lg lg:text-xl leading-relaxed max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+                                Passionate developer creating intuitive, responsive web applications
+                                that deliver outstanding user experiences.
                             </p>
                         </motion.div>
 
@@ -149,22 +148,22 @@ const Hero = () => {
                             variants={container(2.5)}
                             initial="hidden"
                             animate="visible"
-                            className="my-2 py-6 font-light tracking-tighter"
+                            className="my-2 py-4 md:py-6 font-light tracking-tighter"
                         >
                             <motion.button
                                 variants={buttonVariants}
                                 initial="idle"
                                 whileHover="hover"
                                 whileTap="tap"
-                                className="bg-gradient-to-r from-blue-700 to-purple-900 text-white px-4 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 lg:px-10 lg:py-4 text-sm sm:text-base md:text-lg rounded-full font-medium relative overflow-hidden group"
+                                className="bg-gradient-to-r from-blue-700 to-purple-900 text-white px-6 py-3 md:px-8 md:py-4 lg:px-10 lg:py-4 text-sm md:text-base lg:text-lg rounded-full font-medium relative overflow-hidden group"
                             >
                                 <motion.div
                                     className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                 />
                                 <span className="relative z-10 flex items-center space-x-2">
-                                    <span>Connect Me</span>
+                                    <span>Connect</span>
                                     <motion.span
-                                        animate={{ x: [0, 5, 0] }}
+                                        animate={{ x: [0, 4, 0] }}
                                         transition={{ duration: 1.5, repeat: Infinity }}
                                     >
                                         →
@@ -175,11 +174,12 @@ const Hero = () => {
                     </div>
 
                     {/* Right Interactive Elements */}
-                    <div className="relative flex flex-col items-center space-y-4 sm:space-y-6 md:space-y-8">
+                    <div className="relative flex flex-col items-center space-y-4 md:space-y-6 mt-8 lg:mt-0">
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 0.8 }}
+                            className="w-full flex justify-center"
                         >
                             <CodeEditor />
                         </motion.div>
@@ -188,6 +188,7 @@ const Hero = () => {
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1, delay: 1.2 }}
+                            className="w-full flex justify-center"
                         >
                             <SkillBadges />
                         </motion.div>
@@ -199,18 +200,18 @@ const Hero = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 2, duration: 1 }}
-                    className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2"
+                    className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center space-y-2"
                 >
-                    <span className="text-gray-400 text-sm">Scroll Down</span>
+                    <span className="text-gray-400 text-xs md:text-sm">Scroll</span>
                     <motion.div
-                        animate={{ y: [0, 10, 0] }}
+                        animate={{ y: [0, 8, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}
-                        className="w-6 h-10 border-2 border-cyan-500 rounded-full flex justify-center"
+                        className="w-5 h-8 md:w-6 md:h-10 border-2 border-cyan-500 rounded-full flex justify-center"
                     >
                         <motion.div
-                            animate={{ y: [0, 12, 0] }}
+                            animate={{ y: [0, 10, 0] }}
                             transition={{ duration: 2, repeat: Infinity }}
-                            className="w-1 h-3 bg-cyan-500 rounded-full mt-2"
+                            className="w-1 h-2 md:h-3 bg-cyan-500 rounded-full mt-1 md:mt-2"
                         />
                     </motion.div>
                 </motion.div>
