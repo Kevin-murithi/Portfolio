@@ -160,13 +160,13 @@ const LoadingScreen = ({ onComplete }) => {
                 animate={{ opacity: 0.5 }}
                 transition={{ duration: 1 }}
               >
-                <h1 className="text-3xl xs:text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wide bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent" style={{ fontFamily: "'Inter', 'Poppins', 'Montserrat', sans-serif" }}>
+                <h1 className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-wide bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent" style={{ fontFamily: "'Inter', 'Poppins', 'Montserrat', sans-serif" }}>
                   {words[currentWord]}
                 </h1>
               </motion.div>
 
               {/* Main Text */}
-              <h1 className="relative text-3xl xs:text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wide whitespace-nowrap" style={{ fontFamily: "'Inter', 'Poppins', 'Montserrat', sans-serif" }}>
+              <h1 className="relative text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-wide whitespace-nowrap" style={{ fontFamily: "'Inter', 'Poppins', 'Montserrat', sans-serif" }}>
                 {words[currentWord].split("").map((letter, i) => (
                   <motion.span
                     key={i}
