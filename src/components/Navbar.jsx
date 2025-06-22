@@ -149,7 +149,7 @@ export default function Navbar() {
                         <a
                             key={item.name}
                             href={item.href}
-                            className={`text-2xl font-light hover:text-gray-300 transition-colors duration-300 relative ${
+                            className={`text-xl font-light hover:text-gray-300 transition-colors duration-300 relative ${
                                 activeSection === item.href.substring(1) ? 'text-blue-400' : 'text-white'
                             }`}
                             onClick={() => setIsOpen(false)}
