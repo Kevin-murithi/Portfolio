@@ -143,7 +143,7 @@ const LoadingScreen = ({ onComplete }) => {
         ))}
 
         {/* Main Content */}
-        <div className="relative z-10 text-center">
+        <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentWord}
@@ -151,7 +151,7 @@ const LoadingScreen = ({ onComplete }) => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="relative"
+              className="relative overflow-hidden"
             >
               {/* Glow Effect Behind Text */}
               <motion.div
@@ -160,13 +160,13 @@ const LoadingScreen = ({ onComplete }) => {
                 animate={{ opacity: 0.5 }}
                 transition={{ duration: 1 }}
               >
-                <h1 className="text-6xl md:text-9xl font-extrabold tracking-wider bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent" style={{ fontFamily: "'Orbitron', 'Exo 2', 'Rajdhani', monospace" }}>
+                <h1 className="text-3xl xs:text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wide bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent" style={{ fontFamily: "'Inter', 'Poppins', 'Montserrat', sans-serif" }}>
                   {words[currentWord]}
                 </h1>
               </motion.div>
 
               {/* Main Text */}
-              <h1 className="relative text-8xl md:text-9xl font-extrabold tracking-wider" style={{ fontFamily: "'Orbitron', 'Exo 2', 'Rajdhani', monospace" }}>
+              <h1 className="relative text-3xl xs:text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-wide whitespace-nowrap" style={{ fontFamily: "'Inter', 'Poppins', 'Montserrat', sans-serif" }}>
                 {words[currentWord].split("").map((letter, i) => (
                   <motion.span
                     key={i}
