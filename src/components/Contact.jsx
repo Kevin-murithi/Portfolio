@@ -1,6 +1,7 @@
 import { FaInstagram, FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +11,14 @@ const Contact = () => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+
+  // EmailJS configuration - Get these from your EmailJS dashboard
+  const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id';
+  const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id';
+  const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
+
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
@@ -17,10 +26,71 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    // Check if EmailJS is configured
+    if (EMAILJS_SERVICE_ID === 'your_service_id' ||
+        EMAILJS_TEMPLATE_ID === 'your_template_id' ||
+        EMAILJS_PUBLIC_KEY === 'your_public_key') {
+
+      // Fallback: Create mailto link if EmailJS is not configured
+      const subject = encodeURIComponent(`Portfolio Contact: ${formData.subject}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      );
+      const mailtoLink = `mailto:murithikevin54@gmail.com?subject=${subject}&body=${body}`;
+
+      window.open(mailtoLink, '_blank');
+      setSubmitStatus('success');
+      setIsSubmitting(false);
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+      return;
+    }
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'murithikevin54@gmail.com', // Your email address
+        }
+      );
+
+      console.log('Email sent successfully:', result);
+      setSubmitStatus('success');
+
+      // Reset form after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -70,7 +140,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-neutral-400 text-sm">LinkedIn</p>
-                  <p className="text-white">linkedin.com/in/kevin-murithi54</p>
+                  <p className="text-white"><a href="https://www.linkedin.com/in/kevin-murithi54/">linkedin.com/in/kevin-murithi54</a></p>
                 </div>
               </div>
 
@@ -81,7 +151,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-neutral-400 text-sm">GitHub</p>
-                  <p className="text-white">github.com/Kevin-murithi</p>
+                  <p className="text-white"><a href="https://github.com/Kevin-murithi">github.com/Kevin-murithi</a></p>
                 </div>
               </div>
             </div>
@@ -218,14 +288,51 @@ const Contact = () => {
                 </label>
               </div>
 
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-400 text-center"
+                >
+                  ✅ Message sent successfully! I'll get back to you within 24 hours.
+                </motion.div>
+              )}
+
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="p-4 bg-red-500/20 border border-red-500/30 rounded-lg text-red-400 text-center"
+                >
+                  ❌ Failed to send message. Please try again or contact me directly.
+                </motion.div>
+              )}
+
               {/* Submit Button */}
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                disabled={isSubmitting}
+                whileHover={!isSubmitting ? { scale: 1.02 } : {}}
+                whileTap={!isSubmitting ? { scale: 0.98 } : {}}
+                className={`w-full font-medium py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl ${
+                  isSubmitting
+                    ? 'bg-neutral-600 cursor-not-allowed'
+                    : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'
+                }`}
               >
-                Send Message
+                {isSubmitting ? (
+                  <div className="flex items-center justify-center space-x-2">
+                    <motion.div
+                      className="w-4 h-4 border-2 border-white border-t-transparent rounded-full"
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                    />
+                    <span>Sending...</span>
+                  </div>
+                ) : (
+                  'Send Message'
+                )}
               </motion.button>
             </form>
           </motion.div>
