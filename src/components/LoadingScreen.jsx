@@ -69,14 +69,15 @@ const LoadingScreen = ({ onComplete }) => {
 
   const backgroundVariants = {
     initial: {
-      background: "radial-gradient(125% 125% at 50% 10%, #000 40%, #1a1a2e 100%)"
+      background: "radial-gradient(125% 125% at 50% 10%, #000 40%, #4682b4 100%)"
     },
     animate: {
       background: [
-        "radial-gradient(125% 125% at 50% 10%, #000 40%, #1a1a2e 100%)",
-        "radial-gradient(125% 125% at 50% 10%, #000 40%, #16213e 100%)",
-        "radial-gradient(125% 125% at 50% 10%, #000 40%, #0f3460 100%)",
-        "radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%)"
+        "radial-gradient(125% 125% at 50% 10%, #000 40%, #4682b4 100%)",
+        "radial-gradient(125% 125% at 50% 10%, #000 40%, #5a92c7 100%)",
+        "radial-gradient(125% 125% at 50% 10%, #000 40%, #6fa3d9 100%)",
+        "radial-gradient(125% 125% at 50% 10%, #000 40%, #84b4ec 100%)",
+        "radial-gradient(125% 125% at 50% 10%, #000 40%, #4682b4 100%)"
       ],
       transition: {
         duration: 3,
