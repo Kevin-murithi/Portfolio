@@ -141,6 +141,7 @@ const Projects = () => {
           A showcase of innovative solutions and creative implementations,
           each project representing a unique challenge solved with modern technologies
         </p>
+        <p> Project Live demos and Source code restricted for copyright reasons. Contact me to view my work</p>
       </motion.div>
 
       {/* Projects Grid */}
