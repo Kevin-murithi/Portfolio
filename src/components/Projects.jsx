@@ -5,77 +5,81 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
-
+import afriHealth from "../assets/projects/afriHealth.png"
+import tamu from "../assets/projects/tamu.png";
+import vinePulse from "../assets/projects/vinePulse.png";
+import nannyCare from "../assets/projects/nannyCare.png"
 // Mock project data with enhanced details
 const FEATURED_PROJECTS = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with advanced features including real-time inventory management, secure payment processing, and AI-powered product recommendations.",
-    image: project1,
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redis", "AWS"],
-    category: "Full Stack",
-    status: "Live",
-    featured: true,
-    stats: { stars: 124, forks: 45, commits: 287 },
-    links: {
-      live: "#",
-      github: "#",
-      case_study: "#"
-    },
-    highlights: ["Real-time inventory", "AI recommendations", "Payment gateway"]
-  },
-  {
-    id: 2,
-    title: "Task Management Suite",
-    description: "A comprehensive project management application with team collaboration features, real-time updates, and advanced analytics dashboard.",
-    image: project2,
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Socket.io"],
-    category: "Web App",
+    title: "TAMU",
+    description: "TAMU is a digital platform designed to help African food businesses—from street vendors to upscale restaurants—manage, grow, and thrive in today's market. The platform provides tools for: Digital menu management, Real-time GrOrderedList, ProcessingInstruction, Customer relationship management, Analytics and insights",
+    image: tamu,
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Socket.io", "React-Native"],
+    category: ["Web App, Mobile App"],
     status: "Live",
     featured: true,
     stats: { stars: 89, forks: 23, commits: 156 },
     links: {
-      live: "#",
-      github: "#",
+      live: "https://www.tamufoods.app/",
+      github: "",
       case_study: "#"
     },
     highlights: ["Team collaboration", "Real-time sync", "Analytics dashboard"]
   },
   {
-    id: 3,
-    title: "AI Content Generator",
-    description: "An intelligent content creation platform powered by machine learning algorithms for generating high-quality marketing copy and social media content.",
-    image: project3,
-    technologies: ["Python", "FastAPI", "OpenAI", "React", "Docker", "GCP"],
-    category: "AI/ML",
-    status: "Beta",
+    id: 2,
+    title: "NannyCare",
+    description: "NannyCare is an AI-powered healthcare staffing platform designed for Africa that connects caregivers, recruiters, and care facilities to streamline the entire placement journey. It enables recruiters to post roles, review applications, manage contracts, and access insights; empowers caregivers to find meaningful jobs, upload certifications, track application status, and build professional profiles; and helps clients/facilities search qualified caregivers, review credentials, schedule interviews, and manage care teams. With a focus on “Connecting Care Through Intelligence,” NannyCare centralizes hiring and workforce management to make healthcare staffing faster, smarter, and more transparent.",
+    image: nannyCare,
+    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redis", "AWS"],
+    category: "Web App",
+    status: "Live",
     featured: true,
-    stats: { stars: 203, forks: 67, commits: 342 },
+    stats: { stars: 124, forks: 45, commits: 287 },
     links: {
-      live: "#",
-      github: "#",
+      live: "https://chai-week-7.vercel.app/",
+      github: "",
       case_study: "#"
     },
-    highlights: ["AI-powered", "Multi-format output", "API integration"]
+    highlights: ["Real-time inventory", "AI recommendations", "Payment gateway"]
   },
   {
-    id: 4,
-    title: "Real-time Analytics Dashboard",
-    description: "A sophisticated data visualization platform with real-time metrics, custom reporting, and interactive charts for business intelligence.",
-    image: project4,
-    technologies: ["Vue.js", "D3.js", "Express", "InfluxDB", "WebSocket"],
-    category: "Data Viz",
+    id: 3,
+    title: "AfriHealth AI Hub",
+    description: "AfriHealth AI Hub is a comprehensive, offline-first health information system designed to strengthen African health systems through AI-powered insights, real-time outbreak detection, and seamless data management across diverse healthcare environments.",
+    image: afriHealth,
+    technologies: ["Next.js", "D3.js", "Express", "TypeScript", "WebSocket"],
+    category: "Web App",
     status: "Live",
     featured: false,
     stats: { stars: 156, forks: 34, commits: 198 },
     links: {
-      live: "#",
-      github: "#",
+      live: "https://afrihealth-ai-hub.vercel.app/",
+      github: "",
       case_study: "#"
     },
     highlights: ["Real-time data", "Custom reports", "Interactive charts"]
+  },
+  {
+    id: 4,
+    title: "VinePulse",
+    description: "VinePulse is an AI-powered, 360° news platform that delivers a personalized yet balanced news experience across formats, combining a smart recommendation engine that avoids echo chambers with immersive storytelling through interactive timelines, data visualizations, and rich media. It keeps you ahead with real-time updates, trending analysis, and content tailored to your interests, while ensuring diverse perspectives that deepen understanding rather than narrow it. With a modern, engaging interface and seamless calls to action—from exploring features to joining the platform—VinePulse aims to make staying informed both insightful and enjoyable.",
+    image: vinePulse,
+    technologies: ["TypeScript", "Next.js", "express", "React", "Docker", "GCP", "MongoDB"],
+    category: "AI/ML, Web App",
+    status: "Beta",
+    featured: true,
+    stats: { stars: 203, forks: 67, commits: 342 },
+    links: {
+      live: "",
+      github: "",
+      case_study: "#"
+    },
+    highlights: ["AI-powered", "Multi-format output", "API integration"]
   }
+
 ];
 
 const containerVariants = {
@@ -172,7 +176,7 @@ const Projects = () => {
                 />
 
                 {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300 z-10" />
 
                 {/* Status Badge */}
                 <div className="absolute top-4 left-4">
@@ -197,11 +201,19 @@ const Projects = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: hoveredProject === project.id ? 1 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute inset-0 bg-neutral-900/80 backdrop-blur-sm flex items-center justify-center gap-4"
+                  className="absolute inset-0 bg-neutral-900/80 backdrop-blur-sm flex items-center justify-center gap-4 z-20"
+                  style={{ pointerEvents: hoveredProject === project.id ? 'auto' : 'none' }}
                 >
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => {
+                      if (project.links?.live) {
+                        window.open(project.links.live, "_blank", "noopener,noreferrer");
+                      } else {
+                        alert("This project is currently in beta and not publicly available.");
+                      }
+                    }}
                     className="flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-colors duration-200"
                   >
                     <FiExternalLink size={16} />
