@@ -5,7 +5,7 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
-import afriHealth from "../assets/projects/afriHealth.png"
+import echoVital from "../assets/projects/echoVital.png"
 import tamu from "../assets/projects/tamu.png";
 import vinePulse from "../assets/projects/vinePulse.png";
 import nannyCare from "../assets/projects/nannyCare.png"
@@ -49,7 +49,7 @@ const FEATURED_PROJECTS = [
     id: 3,
     title: "EchoVital AI Hub",
     description: "EchoVital AI Hub is a comprehensive, offline-first health information system designed to strengthen African health systems through AI-powered insights, real-time outbreak detection, and seamless data management across diverse healthcare environments.",
-    image: afriHealth,
+    image: echoVital,
     technologies: ["Next.js", "D3.js", "Express", "TypeScript", "WebSocket"],
     category: "Web App",
     status: "Live",
