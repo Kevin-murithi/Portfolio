@@ -47,8 +47,8 @@ const FEATURED_PROJECTS = [
   },
   {
     id: 3,
-    title: "AfriHealth AI Hub",
-    description: "AfriHealth AI Hub is a comprehensive, offline-first health information system designed to strengthen African health systems through AI-powered insights, real-time outbreak detection, and seamless data management across diverse healthcare environments.",
+    title: "EchoVital AI Hub",
+    description: "EchoVital AI Hub is a comprehensive, offline-first health information system designed to strengthen African health systems through AI-powered insights, real-time outbreak detection, and seamless data management across diverse healthcare environments.",
     image: afriHealth,
     technologies: ["Next.js", "D3.js", "Express", "TypeScript", "WebSocket"],
     category: "Web App",
@@ -56,7 +56,7 @@ const FEATURED_PROJECTS = [
     featured: false,
     stats: { stars: 156, forks: 34, commits: 198 },
     links: {
-      live: "https://afrihealth-ai-hub.vercel.app/",
+      live: "https://echo-vital.vercel.app/",
       github: "",
       case_study: "#"
     },
