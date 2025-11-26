@@ -173,15 +173,14 @@ const About = () => {
               />
 
               {/* Image */}
-              <div className="relative bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-2xl md:rounded-3xl p-1.5 md:p-2 shadow-2xl overflow-hidden">
+              <div className="relative bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-2xl md:rounded-3xl p-1.5 md:p-2 shadow-2xl overflow-hidden h-[350px] md:h-[400px] lg:h-[450px]">
                 <motion.img
                   src={profilePic}
                   alt="Kevin Murithi - Full Stack Developer"
-                  className="w-full object-contain rounded-xl md:rounded-2xl"
+                  className="w-full h-full object-cover rounded-xl md:rounded-2xl"
                   style={{ 
                     imageRendering: 'high-quality',
-                    aspectRatio: '3/4',
-                    maxHeight: '450px'
+                    objectPosition: 'center'
                   }}
                   loading="eager"
                   whileHover={{ scale: 1.05 }}
