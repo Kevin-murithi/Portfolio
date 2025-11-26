@@ -155,7 +155,7 @@ const About = () => {
 
             {/* Main Image Container */}
             <motion.div
-              className="relative group max-w-sm md:max-w-md lg:max-w-sm"
+              className="relative group max-w-sm md:max-w-md lg:max-w-lg"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
@@ -173,7 +173,7 @@ const About = () => {
               />
 
               {/* Image */}
-              <div className="relative bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-2xl md:rounded-3xl p-1.5 md:p-2 shadow-2xl overflow-hidden h-[350px] md:h-[400px] lg:h-[450px]">
+              <div className="relative bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-2xl md:rounded-3xl p-1.5 md:p-2 shadow-2xl overflow-hidden h-[450px] md:h-[500px] lg:h-[550px]">
                 <motion.img
                   src={profilePic}
                   alt="Kevin Murithi - Full Stack Developer"
