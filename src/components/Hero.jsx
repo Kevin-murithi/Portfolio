@@ -118,7 +118,8 @@ const Hero = () => {
                             className="relative"
                         >
                             <motion.span
-                                className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-tight text-transparent"
+                                className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-tight text-transparent font-semibold"
+                                style={{ fontFamily: "'Inter', 'Poppins', sans-serif" }}
                                 animate={{
                                     backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
                                 }}
@@ -128,7 +129,7 @@ const Hero = () => {
                                     ease: "linear"
                                 }}
                             >
-                                Full Stack Developer
+                                Full Stack Engineer
                             </motion.span>
                         </motion.div>
 
@@ -138,7 +139,7 @@ const Hero = () => {
                             animate="visible"
                             className="my-2 py-4 md:py-6 font-light tracking-tighter"
                         >
-                            <p className="text-gray-400 text-base md:text-lg lg:text-xl leading-relaxed max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+                            <p className="text-gray-400 text-base md:text-lg lg:text-xl leading-relaxed max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" style={{ fontFamily: "'Inter', sans-serif" }}>
                                 Passionate developer creating intuitive, responsive web applications
                                 that deliver outstanding user experiences.
                             </p>
