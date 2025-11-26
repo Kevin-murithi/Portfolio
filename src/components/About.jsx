@@ -178,6 +178,8 @@ const About = () => {
                   src={profilePic2}
                   alt="Kevin Murithi - Full Stack Developer"
                   className="w-full h-[350px] md:h-[400px] lg:h-[450px] object-cover rounded-xl md:rounded-2xl"
+                  style={{ imageRendering: 'high-quality' }}
+                  loading="eager"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.4 }}
                 />
