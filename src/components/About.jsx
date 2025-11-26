@@ -1,4 +1,4 @@
-import profilePic2 from "../assets/profilePic2.jpg";
+import profilePic from "../assets/profilePic.jpg";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -175,7 +175,7 @@ const About = () => {
               {/* Image */}
               <div className="relative bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-2xl md:rounded-3xl p-1.5 md:p-2 shadow-2xl overflow-hidden">
                 <motion.img
-                  src={profilePic2}
+                  src={profilePic}
                   alt="Kevin Murithi - Full Stack Developer"
                   className="w-full object-contain rounded-xl md:rounded-2xl"
                   style={{ 
