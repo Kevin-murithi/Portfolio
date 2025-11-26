@@ -69,19 +69,18 @@ const LoadingScreen = ({ onComplete }) => {
 
   const backgroundVariants = {
     initial: {
-      background: "radial-gradient(125% 125% at 50% 10%, #000 40%, #4682b4 100%)"
+      background: "radial-gradient(125% 125% at 50% 10%, #0a0a0a 40%, #1a1a2e 100%)"
     },
     animate: {
       background: [
-        "radial-gradient(125% 125% at 50% 10%, #000 40%, #4682b4 100%)",
-        "radial-gradient(125% 125% at 50% 10%, #000 40%, #5a92c7 100%)",
-        "radial-gradient(125% 125% at 50% 10%, #000 40%, #6fa3d9 100%)",
-        "radial-gradient(125% 125% at 50% 10%, #000 40%, #84b4ec 100%)",
-        "radial-gradient(125% 125% at 50% 10%, #000 40%, #4682b4 100%)"
+        "radial-gradient(125% 125% at 50% 10%, #0a0a0a 40%, #1a1a2e 100%)",
+        "radial-gradient(125% 125% at 50% 10%, #0a0a0a 40%, #1e293b 100%)",
+        "radial-gradient(125% 125% at 50% 10%, #0a0a0a 40%, #1a1a2e 100%)"
       ],
       transition: {
-        duration: 3,
-        ease: "easeInOut"
+        duration: 4,
+        ease: "easeInOut",
+        repeat: Infinity
       }
     }
   };
@@ -109,7 +108,7 @@ const LoadingScreen = ({ onComplete }) => {
       >
         {/* Animated Background Elements */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
           variants={glowVariants}
           animate="animate"
         />
@@ -119,12 +118,18 @@ const LoadingScreen = ({ onComplete }) => {
           animate="animate"
           style={{ animationDelay: "1s" }}
         />
+        <motion.div
+          className="absolute top-1/2 right-1/3 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"
+          variants={glowVariants}
+          animate="animate"
+          style={{ animationDelay: "0.5s" }}
+        />
 
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-blue-400/30 rounded-full"
+            className="absolute w-1 h-1 bg-blue-400/20 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,

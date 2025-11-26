@@ -58,12 +58,41 @@ const buttonVariants = {
 
 const Services = () => {
   return (
-    <div className="mb-20 flex justify-center flex-col items-center border-b border-neutral-900 pb-24" id="Services">
+    <div className="relative mb-20 flex justify-center flex-col items-center border-b border-neutral-900 pb-24 overflow-hidden" id="Services">
+        {/* Dynamic Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
+            <motion.div
+                className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"
+                animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.3, 0.6, 0.3],
+                }}
+                transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+            />
+            <motion.div
+                className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"
+                animate={{
+                    scale: [1.2, 1, 1.2],
+                    opacity: [0.4, 0.7, 0.4],
+                }}
+                transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 2
+                }}
+            />
+        </div>
+
         <motion.div
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            className="relative z-10 text-center mb-16"
         >
             <h2 className="my-20 text-center text-4xl font-light">Specialized Development Services</h2>
             <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
@@ -71,7 +100,7 @@ const Services = () => {
             </p>
         </motion.div>
 
-        <div className="w-full max-w-7xl px-4">
+        <div className="relative z-10 w-full max-w-7xl px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {MyServices.map((service, index) => (
                     <motion.div
