@@ -155,7 +155,7 @@ const About = () => {
 
             {/* Main Image Container */}
             <motion.div
-              className="relative group max-w-sm md:max-w-md lg:max-w-lg"
+              className="relative group max-w-md md:max-w-lg lg:max-w-xl"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
